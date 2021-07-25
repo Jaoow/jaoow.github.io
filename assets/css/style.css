@@ -1,0 +1,503 @@
+/* Importing Poppins to the css file. Imported from google API */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility !important;
+    overflow-x: hidden;
+    box-sizing: border-box !important;
+}
+
+.screen-shape {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.2;
+    background-image: radial-gradient(#444cf7 1px, transparent 1px), radial-gradient(#444cf7 1px, #141414 1px); /* Colors for the screen shape */
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    color: white;
+    background-color: rgb(51, 51, 51);
+}
+
+img {
+    -webkit-user-drag: none;
+    -moz-window-dragging: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ESSE É O SCROLL, SEM COR, SÓ COM A LARGURA */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 0;
+    background-color: #FFFFFF;
+    overflow: visible;
+}
+
+/* ESSE É O SCROLL NORMAL, PODE SER DEFINIDO A COR, BORDAR, ETC */
+::-webkit-scrollbar-thumb {
+    height: 10px;
+    padding: 0;
+    background: #0080ff;
+    border-width: 1px 1px 1px 6px;
+}
+
+::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-thumb:hover {
+    background: #0080ff;
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 4px;
+}
+
+
+/* MAIN */
+
+.main-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-left: 14%;
+    padding-right: 14%;
+    margin: auto;
+}
+
+.main-container h2 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 37px;
+    margin-bottom: 0;
+}
+
+.main-container p {
+    color: rgb(175, 175, 190);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 0 0 1em 0;
+}
+
+
+/* NAVIGATION */
+
+#navigation {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#navigation .content-items {
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 10px;
+}
+
+#navigation .content-items h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    margin: 0 0 25px 0;
+}
+
+#navigation .content-items .logo {
+    width: 8vh;
+    display: block;
+    margin: 0 auto 40px;
+}
+
+#navigation .content-items .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#navigation .content-items .links .active {
+    color: white;
+}
+
+#navigation .content-items .links a {
+    width: auto;
+    color: rgba(204, 204, 204, 0.500);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    transition: 0.3s all;
+    padding: 0 20px;
+}
+
+#navigation .content-items .links a:hover {
+    color: white;
+}
+
+/* WORKS */
+
+#works {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 15rem;
+}
+
+#works .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+
+#works .card {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    background-color: #202020;
+    border-radius: 0.7rem;
+}
+
+#works .card img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: 0.3s all;
+}
+
+#works .card:hover img {
+    filter: blur(3px);
+    transform: scale(1.1);
+}
+
+/* ABOUT */
+
+#about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 15rem;
+}
+
+#about .content {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+}
+
+#about .content .card-description {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+}
+
+#about .content .card-description .donate {
+    width: max-content;
+    color: #fff;
+    background: rgba(0, 123, 255, 0.1);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 50px 0;
+    padding: 15px 25px;
+    display: block;
+    transition: 0.3s;
+}
+
+#about .content .card-description .donate span {
+    display: inline-block;
+    margin-left: 7px;
+}
+
+#about .content .card-description .donate:focus,
+#about .content .card-description .donate:hover {
+    color: #000;
+    box-shadow: inset 16em 0 0 0 #FFFFFF;
+}
+
+#about .content .card-image {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    display: block;
+}
+
+#about .content .card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+#about .content .card-description h2 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-weight: 600;
+    font-size: 37px;
+    margin-bottom: 10px;
+}
+
+#about .content .card-description p {
+    width: 90%;
+    color: rgb(175, 175, 190);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+#about .content .card-description p > strong {
+    color: rgb(255, 255, 255);
+}
+
+/* PAGINATION */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 3px;
+    width: 100%;
+}
+
+.pagination .pagination-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination .pagination-item.is-active a {
+    color: white;
+}
+
+.pagination .pagination-item a {
+    text-decoration: none;
+    color: rgba(204, 204, 204, 0.500);;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease-in-out;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.pagination .pagination-item a:hover {
+    color: white;
+}
+
+/* CONTACT */
+
+#contact {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 8rem;
+}
+
+#contact h2 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 37px;
+    margin-bottom: 3px;
+}
+
+#contact p {
+    color: rgba(204, 204, 204, 0.500);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+#contact .methods {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .methods a {
+    display: inline-block;
+    color: rgba(250, 250, 250, 0.700);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+    transition: 0.3s all;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+#contact .methods a:hover {
+    color: rgba(250, 250, 250, 0.500);
+}
+
+/* SOCIALS */
+
+#socials {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+#socials .content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#socials .content svg {
+    width: 29px;
+    height: 29px;
+    fill: rgba(204, 204, 204, 0.500);
+    transition: 0.3s all;
+}
+
+#socials .content svg:hover {
+    fill: white;
+}
+
+#socials .content svg {
+    padding: 20px;
+}
+
+/* TOP BUTTON */
+
+#top-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: none;
+}
+
+#top-button:hover, #top-button:focus {
+    transform: translateY(-10px);
+}
+
+#top-button img {
+    width: 100%;
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    section#about .main-container .content .card-description h2,
+    section#works .main-container h2,
+    section#works .main-container p {
+        text-align: center;
+    }
+
+    section#about .main-container p {
+        text-align: justify;
+    }
+
+
+    .main-container {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-left: 8.5%;
+        padding-right: 8.5%;
+        margin: auto;
+    }
+
+    #works .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+    }
+
+    #about .content {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: block;
+    }
+
+    #about .content .card-description {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #about .content .card-description p {
+        width: 100%;
+    }
+
+    #about .content .card-description .donate {
+        margin: 50px auto;
+    }
+
+    #about .content .card-image {
+        display: none;
+    }
+
+    #contact .methods {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        display: block;
+    }
+
+    #contact .methods a {
+        display: block;
+        margin-bottom: 20px;
+        color: rgba(250, 250, 250, 0.700);
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-weight: 400;
+        font-size: 22px;
+        transition: 0.3s all;
+        text-decoration: none;
+    }
+}
