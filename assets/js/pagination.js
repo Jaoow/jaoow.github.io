@@ -1,13 +1,13 @@
 // How many items per page to show
 const SHOW_PER_PAGE = 6;
 
-jQuery(document).ready(function () {
+let createPagination = () => {
 
     // Cards element
     const cards = $('#cards')
 
     // Getting the amount of elements inside cards div
-    const numberOfItems = cards.children().size();
+    const numberOfItems = cards.children().length;
 
     // Calculate the number of pages we are going to have
     const pagesNum = Math.ceil(numberOfItems / SHOW_PER_PAGE);
@@ -42,9 +42,8 @@ jQuery(document).ready(function () {
     cards.children().css('display', 'none');
 
     // And show the first n (show_per_page) elements
-    cards.children().slice(0, SHOW_PER_PAGE).css('display', 'block');
-
-});
+    cards.children().slice(0, SHOW_PER_PAGE).css('display', 'block')
+}
 
 // Pagination JS
 function previous() {
@@ -78,3 +77,6 @@ function goToPage(pageNum) {
     // update the current page input field
     $('#current_page').val(pageNum);
 }
+
+/* -- */
+createPagination()

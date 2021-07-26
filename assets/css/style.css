@@ -188,15 +188,56 @@ a {
     border-radius: 0.7rem;
 }
 
+#works .card::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #424242 0%, rgba(0, 0, 0, 0) 45%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#works .card .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(33, 37, 41, .2);
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+#works .card .caption .caption-content {
+    margin: auto 2rem 2rem;
+}
+
+#works .card .caption .caption-content h2 {
+    font-size: .9rem;
+    text-align: start !important;
+    text-transform: uppercase;
+}
+
+#works .card .caption .caption-content p {
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: start !important;
+    margin-bottom: 0 !important;
+}
+
 #works .card img {
     width: 100%;
     height: 100%;
     margin: 0;
+    filter: blur(1px);
     transition: 0.3s all;
 }
 
 #works .card:hover img {
-    filter: blur(3px);
+    filter: none;
     transform: scale(1.1);
 }
 
