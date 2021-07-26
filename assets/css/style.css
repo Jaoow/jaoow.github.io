@@ -224,10 +224,6 @@ a {
     transition: 0.3s all;
 }
 
-#works .card:hover .caption {
-    background-color: unset;
-}
-
 #works .card:hover img {
     filter: none;
     transform: scale(1.1);
