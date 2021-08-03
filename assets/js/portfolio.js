@@ -42,7 +42,7 @@ let getCardElement = (post) => {
 let appendToDOM = (posts) => {
     posts.map(post => {
         let fileType = getFileType(post.link);
-        if (fileType === 'gif' || fileType === 'png' || fileType === 'jpg' || fileType === 'webp') {
+        if (fileType === 'gif' || fileType === 'png' || fileType === 'jpg' || fileType === 'webp' || fileType === 'webm') {
             CARDS_DOCUMENT.appendChild(getCardElement(post));
         }
     });
