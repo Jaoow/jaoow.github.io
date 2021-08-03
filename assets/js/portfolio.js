@@ -26,9 +26,9 @@ let getCardElement = (post) => {
     let text = post.description != null ? post.description : "";
     let splitText = text.split("|");
 
-    let title = splitText.length > 0 ? splitText[0] : "Plugin Development";
-    let description = splitText.length > 1 ? splitText[1] : text;
-    let link = splitText.length > 2 ? splitText[2] : "#";
+    let title = splitText.length > 0 ? splitText[0].trim() : "Plugin Development";
+    let description = splitText.length > 1 ? splitText[1].trim() : text;
+    let link = splitText.length > 2 ? (`https://imgur.com/a/${splitText[2].trim()}`) : "#";
 
     return createElementFromHTML(`<a href="${link}" target="_blank"><div class="card">
         <div class="caption">
