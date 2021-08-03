@@ -179,28 +179,26 @@ a {
 
 #works .card {
     width: 100%;
-    height: 280px;
-    background-color: #202020;
-    border-radius: 15px;
-    display: block;
+    height: 350px;
     position: relative;
+    padding: 0;
     overflow: hidden;
+    background-color: #202020;
+    border-radius: 0.7rem;
 }
 
 #works .card .caption {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #515151 0%, rgba(0, 0, 0, 0) 48%);
-    border-radius: 15px;
     display: flex;
-    align-items: flex-end;
+    height: 100%;
+    width: 100%;
     position: absolute;
+    background-color: rgba(33, 37, 41, .2);
     top: 0;
-    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 #works .card .caption .caption-content {
-    width: 100%;
     margin: auto 2rem 2rem;
 }
 
@@ -221,11 +219,9 @@ a {
 #works .card img {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-    animation: all 0.3s ease-in-out;
-    object-fit: cover;
+    margin: 0;
+    transition: 0.3s all;
 }
-
 
 #works .card:hover img {
     transform: scale(1.1);
