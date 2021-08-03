@@ -24,11 +24,13 @@ const fetchImages = (albumId) => {
 let getCardElement = (post) => {
 
     let text = post.description != null ? post.description : "";
+    let splitText = text.split("|");
 
-    let title = text.includes("|") ? text.split("|")[0] : "Plugin Development";
-    let description = text.includes("|") ? text.split("|")[1] : text;
+    let title = splitText.length > 0 ? splitText[0] : "Plugin Development";
+    let description = splitText.length > 1 ? splitText[1] : text;
+    let link = splitText.length > 2 ? splitText[2] : "#";
 
-    return createElementFromHTML(`<div class="card">
+    return createElementFromHTML(`<a href="${link}" target="_blank"><div class="card">
         <div class="caption">
           <div class="caption-content">
             <h2>${title}</h2>
@@ -36,7 +38,7 @@ let getCardElement = (post) => {
           </div>
         </div>
         <img src="${post.link}" alt="${description}">
-      </div>`);
+      </div></a>`);
 }
 
 let appendToDOM = (posts) => {
